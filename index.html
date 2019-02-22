@@ -18,270 +18,358 @@
   <link rel="icon" type="image/png" href="img/favicon/android-chrome-192x192.png" sizes="192x192" data-mce-href="/android-chrome-192x192.png">
   <link rel="icon" type="image/png" href="img/favicon/favicon-96x96.png" sizes="96x96" data-mce-href="/favicon-96x96.png">
   <link rel="icon" type="image/png" href="img/favicon/favicon-16x16.png" sizes="16x16" data-mce-href="/favicon-16x16.png">
-  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700&amp;subset=cyrillic" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.com/libraries/normalize">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700,800&amp;subset=cyrillic" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="libs/slick/slick.css"/>
+  <link rel="stylesheet" type="text/css" href="libs/slick/slick-theme.css"/>
+  <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/main.css">
+  <script>
+    // Picture element HTML5 shiv
+    document.createElement( "picture" );
+  </script>
+  <script src="js/picturefill.min.js" async></script>
 </head>
 <body>
   <header class="page-header">
-    <div class="container">
+    <div class="container page-header__container">
       <div class="page-header__top">
         <a class="logotype">
-          <img src="#" alt="Pilates+">
+          <picture>
+            <source srcset="img/logo-desktop.png" media="(min-width: 1195px)">
+            <source srcset="img/logo-tablet.png" media="(min-width: 670px)">
+              <img src="img/logo-mobile.png" alt="Pilates+">
+          </picture>
         </a>
-        <nav class="main-menu">
-          <button class="main-menu__button-open" type="button"><span class="visuallyhidden">Открыть меню</span></button>
+        <button class="page-header__button-open" type="button"><span class="visuallyhidden">Открыть меню</span></button>
+        <nav class="main-menu" style="display: none">
           <button class="main-menu__button-close" type="button"><span class="visuallyhidden">Закрыть меню</span></button>
           <ul class="main-menu__list">
-            <li class="main-menu__item"><a href="#">О пилатесе</a></li>
-            <li class="main-menu__item"><a href="#">Расписание и стоимость</a></li>
-            <li class="main-menu__item"><a href="#">Как проходят занятия</a></li>
-            <li class="main-menu__item"><a href="#">Отзывы</a></li>
-            <li class="main-menu__item"><a href="#">Контакты</a></li>
+            <li class="main-menu__item"><a id="link1" href="#">О пилатесе</a></li>
+            <li class="main-menu__item"><a id="link2" href="#">Расписание и стоимость</a></li>
+            <li class="main-menu__item"><a id="link3" href="#">Как проходят занятия</a></li>
+            <li class="main-menu__item"><a id="link4" href="#">Отзывы</a></li>
+            <li class="main-menu__item"><a id="link5" href="#">Контакты</a></li>
           </ul>
         </nav>
         <a class="page-header__phone" href="tel:+79183650707">+7 918 365 07 07</a>
       </div>
       <h1 class="page-header__title">Студия пилатеса</h1>
       <p class="page-header__slogan">Твое здоровое тело через 10 занятий</p>
-      <a class="button" href="#">Смотреть расписание</a>
+      <a class="button page-header__button" href="#">Смотреть расписание</a>
     </div>
-    <img src="#" alt="Студия пилатеса">
+    <div class="page-header__img">
+      <picture>
+        <source srcset="img/header-woman-desktop.png" media="(min-width: 1195px)">
+        <source srcset="img/header-woman-tablet.png" media="(min-width: 670px)">
+        <img src="img/header-woman-mobile.png" alt="Студия пилатеса">
+      </picture>
+    </div>
   </header>
-
-  <section class="about-pilates">
-    <div class="container">
-      <h2 class="title">О пилатесе</h2>
-      <p class="about-pilates__text">Пилатес соединяет элементы растяжки с элементами силовой тренировки</p>
-      <p class="about-pilates__text">Комплекс упражнений укрепляет мышцы пресса и спины, улучшает гибкость мышц и связок, подвижность суставов и избавляет от дискомфорта в позвоночнике</p>
+  <section class="about-pilates" id="about-pilates">
+    <div class="container about-pilates__container">
+      <h2 class="title about-pilates__title">О пилатесе</h2>
+      <p class="about-pilates__text about-pilates__text--1">Пилатес соединяет элементы растяжки с элементами силовой тренировки</p>
+      <p class="about-pilates__text about-pilates__text--2">Комплекс упражнений укрепляет мышцы пресса и спины, улучшает гибкость мышц и связок, подвижность суставов и избавляет от дискомфорта в позвоночнике</p>
       <a class="about-pilates__link" href="#">Подробнее</a>
+      <div class="about-pilates__img">
+        <picture>
+          <source srcset="img/about-pilates-desktop.png" media="(min-width: 1195px)">
+          <source srcset="img/about-pilates-tablet.png" media="(min-width: 670px)">
+          <img src="img/about-pilates-mobile.png" alt="Занятие">
+        </picture>
+      </div>
     </div>
   </section>
-
-  <section class="page-price">
+  <section class="page-price" id="schedule">
     <div class="container">
-      <h2 class="title">Расписание и стоимость</h2>
+      <h2 class="title page-price__title">Расписание и стоимость</h2>
       <ol class="page-price__list">
-        <li class="page-price__item">
+        <li class="page-price__item page-price__item--1">
           <h3 class="page-price__item-title"><span>Уровень</span> Новичок</h3>
           <b class="page-price__item-price">150 руб. / занятие</b>
           <ul class="page-price__schedule">
-            <li class="page-price__schedule-item">пн 9:00 — 10:00</li>
-            <li class="page-price__schedule-item">ср 9:00 — 10:00</li>
-            <li class="page-price__schedule-item">пт 9:00 — 10:00</li>
+            <li class="page-price__schedule-item"><span>пн</span> 9:00 — 10:00</li>
+            <li class="page-price__schedule-item"><span>ср</span> 9:00 — 10:00</li>
+            <li class="page-price__schedule-item"><span>пт</span> 9:00 — 10:00</li>
           </ul>
-          <a class="button" href="#">Записаться</a>
+          <a class="button page-price__button" href="#">Записаться</a>
         </li>
-        <li class="page-price__item">
+        <li class="page-price__item page-price__item--2">
           <h3 class="page-price__item-title"><span>Уровень</span> Профи</h3>
           <b class="page-price__item-price">200 руб. / занятие</b>
           <ul class="page-price__schedule">
-            <li class="page-price__schedule-item">пн 18:15 — 19:45</li>
-            <li class="page-price__schedule-item">ср 18:15 — 19:45</li>
-            <li class="page-price__schedule-item">пт 18:15 — 19:45</li>
+            <li class="page-price__schedule-item"><span>пн</span> 18:15 — 19:45</li>
+            <li class="page-price__schedule-item"><span>ср</span> 18:15 — 19:45</li>
+            <li class="page-price__schedule-item"><span>пт</span> 18:15 — 19:45</li>
           </ul>
-          <a class="button" href="#">Записаться</a>
+          <a class="button page-price__button" href="#">Записаться</a>
         </li>
-        <li class="page-price__item">
+        <li class="page-price__item page-price__item--3">
           <h3 class="page-price__item-title"><span>Уровень</span> Мастер</h3>
           <b class="page-price__item-price">350 руб. / занятие</b>
           <ul class="page-price__schedule">
-            <li class="page-price__schedule-item">пн 20:00 — 21:30</li>
-            <li class="page-price__schedule-item">ср 20:00 — 21:30</li>
-            <li class="page-price__schedule-item">пт 20:00 — 21:30</li>
+            <li class="page-price__schedule-item"><span>пн</span> 20:00 — 21:30</li>
+            <li class="page-price__schedule-item"><span>ср</span> 20:00 — 21:30</li>
+            <li class="page-price__schedule-item"><span>пт</span> 20:00 — 21:30</li>
           </ul>
-          <a class="button" href="#">Записаться</a>
+          <a class="button page-price__button" href="#">Записаться</a>
         </li>
       </ol>
     </div>
   </section>
-
-  <section class="page-practice">
+  <section class="page-practice" id="practice">
     <div class="container">
-      <h2 class="title">Как проходят занятия</h2>
+      <h2 class="title page-practice__title">Как проходят занятия</h2>
       <ul class="page-practice__list">
-        <li class="page-practice__item">
-          <h3 class="page-practice__title">Дыхательные техники</h3>
-          <p class="page-practice__descripton">
-            Специальные дыхательные упражнения помогут сконцентрировать внимание и сфокусировать сознание на мышцах тела
-          </p>
-          <img class="page-practice__img" src="#" alt="Дыхательные техники">
+        <li class="page-practice__item page-practice__item--1">
+          <div class="page-practice__box">
+            <h3 class="page-practice__item-title">Дыхательные техники</h3>
+            <p class="page-practice__descripton">
+              Специальные дыхательные упражнения помогут сконцентрировать внимание и сфокусировать сознание на мышцах тела
+            </p>
+            <div class="page-practice__img page-practice__img--1">
+              <picture>
+                <source srcset="img/bright-technical-desktop.png" media="(min-width: 1195px)">
+                <source srcset="img/bright-technical-tablet.png" media="(min-width: 670px)">
+                <img src="img/bright-technical-mobile.png" alt="Дыхательные техники">
+              </picture>
+            </div>
+          </div>
         </li>
-        <li class="page-practice__item">
-          <h3 class="page-practice__title">Разминка</h3>
-          <p class="page-practice__descripton">
-            Перед началом занятия разогреваем тело: проработываем мышцы спины, шеи, выполняем упражнения на баланс под спокойную музыку
-          </p>
-          <img class="page-practice__item-img" src="#" alt="Разминка">
+        <li class="page-practice__item page-practice__item--2">
+          <div class="page-practice__box">
+            <h3 class="page-practice__item-title">Разминка</h3>
+            <p class="page-practice__descripton">
+              Перед началом занятия разогреваем тело: проработываем мышцы спины, шеи, выполняем упражнения на баланс под спокойную музыку
+            </p>
+            <div class="page-practice__img page-practice__img--2">
+              <picture>
+                <source srcset="img/warmup-desktop.png" media="(min-width: 1195px)">
+                <source srcset="img/warmup-tablet.png" media="(min-width: 670px)">
+                <img src="img/warmup-mobile.png" alt="Разминка">
+              </picture>
+            </div>
+          </div>
         </li>
-        <li class="page-practice__item">
-          <h3 class="page-practice__title">Основной блок</h3>
-          <p class="page-practice__descripton">
-            Упражнения выполняются лежа на коврике без оборудования или с малым оборудованием, в медленном темпе
-          </p>
-          <img class="page-practice__img" src="#" alt="Основной блок">
+        <li class="page-practice__item page-practice__item--3">
+          <div class="page-practice__box">
+            <h3 class="page-practice__item-title">Основной блок</h3>
+            <p class="page-practice__descripton">
+              Упражнения выполняются лежа на коврике без оборудования или с малым оборудованием, в медленном темпе
+            </p>
+          </div>
+          <div class="page-practice__img page-practice__img--3">
+            <picture>
+              <source srcset="img/main-block-desktop.png" media="(min-width: 1195px)">
+              <source srcset="img/main-block-tablet.png" media="(min-width: 670px)">
+                <img src="img/main-block-mobile.png" alt="Основной блок">
+            </picture>
+          </div>
         </li>
-        <li class="page-practice__item">
-          <h3 class="page-practice__title">Стрейчинг</h3>
-          <p class="page-practice__descripton">
-            В конце занятия выполняем специальные упражнения для развития гибкости, снятия усталости, стресса и мышечного напряжения
-          </p>
-          <img class="page-practice__img" src="#" alt="Стрейчинг">
+        <li class="page-practice__item page-practice__item--4">
+          <div class="page-practice__box">
+            <h3 class="page-practice__item-title">Стрейчинг</h3>
+            <p class="page-practice__descripton">
+              В конце занятия выполняем специальные упражнения для развития гибкости, снятия усталости, стресса и мышечного напряжения
+            </p>
+          </div>
+          <div class="page-practice__img page-practice__img--4">
+            <picture>
+              <source srcset="img/stretching-desktop.png" media="(min-width: 1195px)">
+              <source srcset="img/stretching-tablet.png" media="(min-width: 670px)">
+              <img src="img/stretching-mobile.png" alt="Стрейчинг">
+            </picture>
+          </div>
         </li>
       </ul>
     </div>
   </section>
-
-  <section class="page-reviews">
+  <section class="page-reviews" id="reviews">
     <div class="container">
-      <h2 class="title">Отзывы</h2>
+      <h2 class="title page-reviews__title">Отзывы</h2>
       <ul class="page-reviews__list">
         <li class="page-reviews__item">
-          <div class="page-reviews__autor-img">
-            <img src="#" alt="Вероника Кулешова">
-          </div>
-          <div class="page-reviews__autor">
-            <h3 class="page-reviews__autor-name">Вероника Кулешова</h3>
-            <div class="page-reviews__box">
-              <b class="page-reviews__autor-age">25 лет</b>
-              <ul class="social">
-                <li class="social__item">
-                  <a class="social__link" href="https://vk.com/" target="_blank">
-                    <span class="visuallyhidden">ВКонтакте</span>
-                  </a>
-                </li>
-                <li class="social__item">
-                  <a class="social__link" href="https://www.instagram.com" target="_blank">
-                    <span class="visuallyhidden">Инстаграм</span>
-                  </a>
-                </li>
-              </ul>
+         <div class="page-reviews__item-wrap">
+            <div class="page-reviews__autor-img">
+              <picture>
+                <source srcset="img/user1-desktop.jpg" media="(min-width: 1195px)">
+                  <img src="img/user1-mobile.jpg" alt="Вероника Кулешова">
+              </picture>
             </div>
-            <p class="page-reviews__text">
-              Хожу на пилатес уже пять месяцев. После десяти занятий уже увидела результат: тело подтянулось, улучшилась осанка, появился пресс. И самое главное, пропал сильный изгиб поясничного отдела, который меня очень беспокоил.
-            </p>
+            <div class="page-reviews__autor">
+              <h3 class="page-reviews__autor-name">Вероника Кулешова</h3>
+              <div class="page-reviews__box">
+                <b class="page-reviews__autor-age">25 лет</b>
+                <ul class="page-reviews__social">
+                  <li class="page-reviews__social-item">
+                    <a class="page-reviews__social-link page-reviews__social-item--vk" href="https://vk.com/" target="_blank">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20" heigh="15" viewBox="0 0 548.358 548.358" fill="#7f7f7f"><path d="M545.451 400.298c-.664-1.431-1.283-2.618-1.858-3.569-9.514-17.135-27.695-38.167-54.532-63.102l-.567-.571-.284-.28-.287-.287h-.288c-12.18-11.611-19.893-19.418-23.123-23.415-5.91-7.614-7.234-15.321-4.004-23.13 2.282-5.9 10.854-18.36 25.696-37.397 7.807-10.089 13.99-18.175 18.556-24.267 32.931-43.78 47.208-71.756 42.828-83.939l-1.701-2.847c-1.143-1.714-4.093-3.282-8.846-4.712-4.764-1.427-10.853-1.663-18.278-.712l-82.224.568c-1.332-.472-3.234-.428-5.712.144l-3.713.859-1.431.715-1.136.859c-.952.568-1.999 1.567-3.142 2.995-1.137 1.423-2.088 3.093-2.848 4.996-8.952 23.031-19.13 44.444-30.553 64.238-7.043 11.803-13.511 22.032-19.418 30.693-5.899 8.658-10.848 15.037-14.842 19.126-4 4.093-7.61 7.372-10.852 9.849-3.237 2.478-5.708 3.525-7.419 3.142-1.715-.383-3.33-.763-4.859-1.143-2.663-1.714-4.805-4.045-6.42-6.995-1.622-2.95-2.714-6.663-3.285-11.136-.568-4.476-.904-8.326-1-11.563-.089-3.233-.048-7.806.145-13.706.198-5.903.287-9.897.287-11.991 0-7.234.141-15.085.424-23.555.288-8.47.521-15.181.716-20.125.194-4.949.284-10.185.284-15.705s-.336-9.849-1-12.991a44.442 44.442 0 0 0-2.99-9.137c-1.335-2.95-3.289-5.232-5.853-6.852-2.569-1.618-5.763-2.902-9.564-3.856-10.089-2.283-22.936-3.518-38.547-3.71-35.401-.38-58.148 1.906-68.236 6.855-3.997 2.091-7.614 4.948-10.848 8.562-3.427 4.189-3.905 6.475-1.431 6.851 11.422 1.711 19.508 5.804 24.267 12.275l1.715 3.429c1.334 2.474 2.666 6.854 3.999 13.134 1.331 6.28 2.19 13.227 2.568 20.837.95 13.897.95 25.793 0 35.689-.953 9.9-1.853 17.607-2.712 23.127-.859 5.52-2.143 9.993-3.855 13.418-1.715 3.426-2.856 5.52-3.428 6.28-.571.76-1.047 1.239-1.425 1.427a21.387 21.387 0 0 1-7.71 1.431c-2.667 0-5.901-1.334-9.707-4-3.805-2.666-7.754-6.328-11.847-10.992-4.093-4.665-8.709-11.184-13.85-19.558-5.137-8.374-10.467-18.271-15.987-29.691l-4.567-8.282c-2.855-5.328-6.755-13.086-11.704-23.267-4.952-10.185-9.329-20.037-13.134-29.554-1.521-3.997-3.806-7.04-6.851-9.134l-1.429-.859c-.95-.76-2.475-1.567-4.567-2.427a30.301 30.301 0 0 0-6.567-1.854l-78.229.568c-7.994 0-13.418 1.811-16.274 5.428l-1.143 1.711c-.571.953-.859 2.475-.859 4.57 0 2.094.571 4.664 1.714 7.707 11.42 26.84 23.839 52.725 37.257 77.659 13.418 24.934 25.078 45.019 34.973 60.237 9.897 15.229 19.985 29.602 30.264 43.112 10.279 13.515 17.083 22.176 20.412 25.981 3.333 3.812 5.951 6.662 7.854 8.565l7.139 6.851c4.568 4.569 11.276 10.041 20.127 16.416 8.853 6.379 18.654 12.659 29.408 18.85 10.756 6.181 23.269 11.225 37.546 15.126 14.275 3.905 28.169 5.472 41.684 4.716h32.834c6.659-.575 11.704-2.669 15.133-6.283l1.136-1.431c.764-1.136 1.479-2.901 2.139-5.276.668-2.379 1-5 1-7.851-.195-8.183.428-15.558 1.852-22.124 1.423-6.564 3.045-11.513 4.859-14.846 1.813-3.33 3.859-6.14 6.136-8.418 2.282-2.283 3.908-3.666 4.862-4.142.948-.479 1.705-.804 2.276-.999 4.568-1.522 9.944-.048 16.136 4.429 6.187 4.473 11.99 9.996 17.418 16.56 5.425 6.57 11.943 13.941 19.555 22.124 7.617 8.186 14.277 14.271 19.985 18.274l5.708 3.426c3.812 2.286 8.761 4.38 14.853 6.283 6.081 1.902 11.409 2.378 15.984 1.427l73.087-1.14c7.229 0 12.854-1.197 16.844-3.572 3.998-2.379 6.373-5 7.139-7.851.764-2.854.805-6.092.145-9.712-.677-3.611-1.344-6.136-2.008-7.563z"/></svg>
+                      <span class="visuallyhidden">ВКонтакте</span>
+                    </a>
+                  </li>
+                  <li class="page-reviews__social-item">
+                    <a class="page-reviews__social-link page-reviews__social-item--inst" href="https://www.instagram.com" target="_blank">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="15" heigh="15" viewBox="0 0 438.536 438.536" fill="#7f7f7f"><path d="M421.981 16.562C410.941 5.519 397.711 0 382.298 0H56.248C40.83 0 27.604 5.521 16.561 16.562 5.52 27.6.001 40.828.001 56.243V382.29c0 15.413 5.518 28.644 16.56 39.683 11.043 11.04 24.272 16.563 39.687 16.563h326.046c15.41 0 28.644-5.523 39.684-16.563 11.043-11.039 16.557-24.27 16.557-39.683V56.243c-.001-15.418-5.514-28.639-16.554-39.681zM157.462 158.025c17.224-16.652 37.924-24.982 62.097-24.982 24.36 0 45.153 8.33 62.381 24.982 17.228 16.655 25.837 36.785 25.837 60.386 0 23.598-8.609 43.729-25.837 60.379-17.228 16.659-38.014 24.988-62.381 24.988-24.172 0-44.87-8.336-62.097-24.988-17.228-16.652-25.841-36.781-25.841-60.379 0-23.601 8.613-43.73 25.841-60.386zm231.403 212.564c0 4.945-1.718 9.083-5.141 12.416-3.433 3.33-7.519 4.996-12.282 4.996h-305.2c-4.948 0-9.091-1.666-12.419-4.996-3.333-3.326-4.998-7.471-4.998-12.416V185.575H89.08c-3.805 11.993-5.708 24.462-5.708 37.402 0 36.553 13.322 67.715 39.969 93.511 26.65 25.786 58.721 38.685 96.217 38.685 24.744 0 47.583-5.903 68.527-17.703 20.937-11.807 37.486-27.839 49.676-48.112 12.183-20.272 18.274-42.4 18.274-66.38 0-12.94-1.91-25.406-5.715-37.402h38.547V370.59h-.002zm0-254.963c0 5.52-1.903 10.184-5.716 13.99-3.805 3.809-8.466 5.711-13.989 5.711h-49.676c-5.517 0-10.185-1.903-13.99-5.711-3.806-3.806-5.708-8.47-5.708-13.99V68.522c0-5.33 1.902-9.945 5.708-13.848 3.806-3.901 8.474-5.854 13.99-5.854h49.676c5.523 0 10.185 1.952 13.989 5.854 3.812 3.903 5.716 8.518 5.716 13.848v47.104z"/></svg>
+                      <span class="visuallyhidden">Инстаграм</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <p class="page-reviews__text">
+                Хожу на пилатес уже пять месяцев. После десяти занятий уже увидела результат: тело подтянулось, улучшилась осанка, появился пресс. И самое главное, пропал сильный изгиб поясничного отдела, который меня очень беспокоил.
+              </p>
+            </div>
+         </div>
+        </li>
+        <li class="page-reviews__item">
+          <div class="page-reviews__item-wrap">
+            <div class="page-reviews__autor-img">
+              <picture>
+                <source srcset="img/user2-desktop.jpg" media="(min-width: 1195px)">
+                <img src="img/user2-mobile.jpg" alt="Елизавета Смирнова">
+              </picture>
+            </div>
+            <div class="page-reviews__autor">
+              <h3 class="page-reviews__autor-name">Елизавета Смирнова</h3>
+              <div class="page-reviews__box">
+                <b class="page-reviews__autor-age">29 лет</b>
+                <ul class="page-reviews__social">
+                  <li class="page-reviews__social-item">
+                    <a class="page-reviews__social-link page-reviews__social-item--vk" href="https://vk.com/" target="_blank">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20" heigh="15" viewBox="0 0 548.358 548.358" fill="#7f7f7f"><path d="M545.451 400.298c-.664-1.431-1.283-2.618-1.858-3.569-9.514-17.135-27.695-38.167-54.532-63.102l-.567-.571-.284-.28-.287-.287h-.288c-12.18-11.611-19.893-19.418-23.123-23.415-5.91-7.614-7.234-15.321-4.004-23.13 2.282-5.9 10.854-18.36 25.696-37.397 7.807-10.089 13.99-18.175 18.556-24.267 32.931-43.78 47.208-71.756 42.828-83.939l-1.701-2.847c-1.143-1.714-4.093-3.282-8.846-4.712-4.764-1.427-10.853-1.663-18.278-.712l-82.224.568c-1.332-.472-3.234-.428-5.712.144l-3.713.859-1.431.715-1.136.859c-.952.568-1.999 1.567-3.142 2.995-1.137 1.423-2.088 3.093-2.848 4.996-8.952 23.031-19.13 44.444-30.553 64.238-7.043 11.803-13.511 22.032-19.418 30.693-5.899 8.658-10.848 15.037-14.842 19.126-4 4.093-7.61 7.372-10.852 9.849-3.237 2.478-5.708 3.525-7.419 3.142-1.715-.383-3.33-.763-4.859-1.143-2.663-1.714-4.805-4.045-6.42-6.995-1.622-2.95-2.714-6.663-3.285-11.136-.568-4.476-.904-8.326-1-11.563-.089-3.233-.048-7.806.145-13.706.198-5.903.287-9.897.287-11.991 0-7.234.141-15.085.424-23.555.288-8.47.521-15.181.716-20.125.194-4.949.284-10.185.284-15.705s-.336-9.849-1-12.991a44.442 44.442 0 0 0-2.99-9.137c-1.335-2.95-3.289-5.232-5.853-6.852-2.569-1.618-5.763-2.902-9.564-3.856-10.089-2.283-22.936-3.518-38.547-3.71-35.401-.38-58.148 1.906-68.236 6.855-3.997 2.091-7.614 4.948-10.848 8.562-3.427 4.189-3.905 6.475-1.431 6.851 11.422 1.711 19.508 5.804 24.267 12.275l1.715 3.429c1.334 2.474 2.666 6.854 3.999 13.134 1.331 6.28 2.19 13.227 2.568 20.837.95 13.897.95 25.793 0 35.689-.953 9.9-1.853 17.607-2.712 23.127-.859 5.52-2.143 9.993-3.855 13.418-1.715 3.426-2.856 5.52-3.428 6.28-.571.76-1.047 1.239-1.425 1.427a21.387 21.387 0 0 1-7.71 1.431c-2.667 0-5.901-1.334-9.707-4-3.805-2.666-7.754-6.328-11.847-10.992-4.093-4.665-8.709-11.184-13.85-19.558-5.137-8.374-10.467-18.271-15.987-29.691l-4.567-8.282c-2.855-5.328-6.755-13.086-11.704-23.267-4.952-10.185-9.329-20.037-13.134-29.554-1.521-3.997-3.806-7.04-6.851-9.134l-1.429-.859c-.95-.76-2.475-1.567-4.567-2.427a30.301 30.301 0 0 0-6.567-1.854l-78.229.568c-7.994 0-13.418 1.811-16.274 5.428l-1.143 1.711c-.571.953-.859 2.475-.859 4.57 0 2.094.571 4.664 1.714 7.707 11.42 26.84 23.839 52.725 37.257 77.659 13.418 24.934 25.078 45.019 34.973 60.237 9.897 15.229 19.985 29.602 30.264 43.112 10.279 13.515 17.083 22.176 20.412 25.981 3.333 3.812 5.951 6.662 7.854 8.565l7.139 6.851c4.568 4.569 11.276 10.041 20.127 16.416 8.853 6.379 18.654 12.659 29.408 18.85 10.756 6.181 23.269 11.225 37.546 15.126 14.275 3.905 28.169 5.472 41.684 4.716h32.834c6.659-.575 11.704-2.669 15.133-6.283l1.136-1.431c.764-1.136 1.479-2.901 2.139-5.276.668-2.379 1-5 1-7.851-.195-8.183.428-15.558 1.852-22.124 1.423-6.564 3.045-11.513 4.859-14.846 1.813-3.33 3.859-6.14 6.136-8.418 2.282-2.283 3.908-3.666 4.862-4.142.948-.479 1.705-.804 2.276-.999 4.568-1.522 9.944-.048 16.136 4.429 6.187 4.473 11.99 9.996 17.418 16.56 5.425 6.57 11.943 13.941 19.555 22.124 7.617 8.186 14.277 14.271 19.985 18.274l5.708 3.426c3.812 2.286 8.761 4.38 14.853 6.283 6.081 1.902 11.409 2.378 15.984 1.427l73.087-1.14c7.229 0 12.854-1.197 16.844-3.572 3.998-2.379 6.373-5 7.139-7.851.764-2.854.805-6.092.145-9.712-.677-3.611-1.344-6.136-2.008-7.563z"/></svg>
+                      <span class="visuallyhidden">ВКонтакте</span>
+                    </a>
+                  </li>
+                  <li class="page-reviews__social-item">
+                    <a class="page-reviews__social-link page-reviews__social-item--inst" href="https://www.instagram.com" target="_blank">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="15" heigh="15" viewBox="0 0 438.536 438.536" fill="#7f7f7f"><path d="M421.981 16.562C410.941 5.519 397.711 0 382.298 0H56.248C40.83 0 27.604 5.521 16.561 16.562 5.52 27.6.001 40.828.001 56.243V382.29c0 15.413 5.518 28.644 16.56 39.683 11.043 11.04 24.272 16.563 39.687 16.563h326.046c15.41 0 28.644-5.523 39.684-16.563 11.043-11.039 16.557-24.27 16.557-39.683V56.243c-.001-15.418-5.514-28.639-16.554-39.681zM157.462 158.025c17.224-16.652 37.924-24.982 62.097-24.982 24.36 0 45.153 8.33 62.381 24.982 17.228 16.655 25.837 36.785 25.837 60.386 0 23.598-8.609 43.729-25.837 60.379-17.228 16.659-38.014 24.988-62.381 24.988-24.172 0-44.87-8.336-62.097-24.988-17.228-16.652-25.841-36.781-25.841-60.379 0-23.601 8.613-43.73 25.841-60.386zm231.403 212.564c0 4.945-1.718 9.083-5.141 12.416-3.433 3.33-7.519 4.996-12.282 4.996h-305.2c-4.948 0-9.091-1.666-12.419-4.996-3.333-3.326-4.998-7.471-4.998-12.416V185.575H89.08c-3.805 11.993-5.708 24.462-5.708 37.402 0 36.553 13.322 67.715 39.969 93.511 26.65 25.786 58.721 38.685 96.217 38.685 24.744 0 47.583-5.903 68.527-17.703 20.937-11.807 37.486-27.839 49.676-48.112 12.183-20.272 18.274-42.4 18.274-66.38 0-12.94-1.91-25.406-5.715-37.402h38.547V370.59h-.002zm0-254.963c0 5.52-1.903 10.184-5.716 13.99-3.805 3.809-8.466 5.711-13.989 5.711h-49.676c-5.517 0-10.185-1.903-13.99-5.711-3.806-3.806-5.708-8.47-5.708-13.99V68.522c0-5.33 1.902-9.945 5.708-13.848 3.806-3.901 8.474-5.854 13.99-5.854h49.676c5.523 0 10.185 1.952 13.989 5.854 3.812 3.903 5.716 8.518 5.716 13.848v47.104z"/></svg>
+                      <span class="visuallyhidden">Инстаграм</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <p class="page-reviews__text">
+                Очень нравятся занятия, хожу уже пять месяцев. На занятиях делаем много упражнений на пресс, бедра и спину. Мышци подтянулись, появился рельеф и хорошее настроение :)
+              </p>
+            </div>
           </div>
         </li>
         <li class="page-reviews__item">
-          <div class="page-reviews__autor">
-            <h3 class="page-reviews__autor-name">Елизавета Смирноваа</h3>
-            <div class="page-reviews__box">
-              <b class="page-reviews__autor-age">29 лет</b>
-              <ul class="social">
-                <li class="social__item">
-                  <a class="social__link" href="https://vk.com/" target="_blank">
-                    <span class="visuallyhidden">ВКонтакте</span>
-                  </a>
-                </li>
-                <li class="social__item">
-                  <a class="social__link" href="https://www.instagram.com" target="_blank">
-                    <span class="visuallyhidden">Инстаграм</span>
-                  </a>
-                </li>
-              </ul>
+          <div class="page-reviews__item-wrap">
+            <div class="page-reviews__autor-img">
+              <picture>
+                <source srcset="img/user3-desktop.jpg" media="(min-width: 1195px)">
+                <img src="img/user3-mobile.jpg" alt="Кристина Егорова">
+              </picture>
             </div>
-            <p class="page-reviews__text">
-              Очень нравятся занятия, хожу уже пять месяцев. На занятиях делаем много упражнений на пресс, бедра и спину. Мышци подтянулись, появился рельеф и хорошее настроение :)
-            </p>
-          </div>
-        </li>
-        <li class="page-reviews__item">
-          <div class="page-reviews__autor-img">
-            <img src="#" alt="Кристина Егорова">
-          </div>
-          <div class="page-reviews__autor">
-            <h3 class="page-reviews__autor-name">Кристина Егорова</h3>
-            <div class="page-reviews__box">
-              <b class="page-reviews__autor-age">23 лет</b>
-              <ul class="social">
-                <li class="social__item">
-                  <a class="social__link" href="https://vk.com/" target="_blank">
-                    <span class="visuallyhidden">ВКонтакте</span>
-                  </a>
-                </li>
-                <li class="social__item">
-                  <a class="social__link" href="https://www.instagram.com" target="_blank">
-                    <span class="visuallyhidden">Инстаграм</span>
-                  </a>
-                </li>
-              </ul>
+            <div class="page-reviews__autor">
+              <h3 class="page-reviews__autor-name">Кристина Егорова</h3>
+              <div class="page-reviews__box">
+                <b class="page-reviews__autor-age">23 лет</b>
+                <ul class="page-reviews__social">
+                  <li class="page-reviews__social-item">
+                    <a class="page-reviews__social-link page-reviews__social-item--vk" href="https://vk.com/" target="_blank">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20" heigh="15" viewBox="0 0 548.358 548.358" fill="#7f7f7f"><path d="M545.451 400.298c-.664-1.431-1.283-2.618-1.858-3.569-9.514-17.135-27.695-38.167-54.532-63.102l-.567-.571-.284-.28-.287-.287h-.288c-12.18-11.611-19.893-19.418-23.123-23.415-5.91-7.614-7.234-15.321-4.004-23.13 2.282-5.9 10.854-18.36 25.696-37.397 7.807-10.089 13.99-18.175 18.556-24.267 32.931-43.78 47.208-71.756 42.828-83.939l-1.701-2.847c-1.143-1.714-4.093-3.282-8.846-4.712-4.764-1.427-10.853-1.663-18.278-.712l-82.224.568c-1.332-.472-3.234-.428-5.712.144l-3.713.859-1.431.715-1.136.859c-.952.568-1.999 1.567-3.142 2.995-1.137 1.423-2.088 3.093-2.848 4.996-8.952 23.031-19.13 44.444-30.553 64.238-7.043 11.803-13.511 22.032-19.418 30.693-5.899 8.658-10.848 15.037-14.842 19.126-4 4.093-7.61 7.372-10.852 9.849-3.237 2.478-5.708 3.525-7.419 3.142-1.715-.383-3.33-.763-4.859-1.143-2.663-1.714-4.805-4.045-6.42-6.995-1.622-2.95-2.714-6.663-3.285-11.136-.568-4.476-.904-8.326-1-11.563-.089-3.233-.048-7.806.145-13.706.198-5.903.287-9.897.287-11.991 0-7.234.141-15.085.424-23.555.288-8.47.521-15.181.716-20.125.194-4.949.284-10.185.284-15.705s-.336-9.849-1-12.991a44.442 44.442 0 0 0-2.99-9.137c-1.335-2.95-3.289-5.232-5.853-6.852-2.569-1.618-5.763-2.902-9.564-3.856-10.089-2.283-22.936-3.518-38.547-3.71-35.401-.38-58.148 1.906-68.236 6.855-3.997 2.091-7.614 4.948-10.848 8.562-3.427 4.189-3.905 6.475-1.431 6.851 11.422 1.711 19.508 5.804 24.267 12.275l1.715 3.429c1.334 2.474 2.666 6.854 3.999 13.134 1.331 6.28 2.19 13.227 2.568 20.837.95 13.897.95 25.793 0 35.689-.953 9.9-1.853 17.607-2.712 23.127-.859 5.52-2.143 9.993-3.855 13.418-1.715 3.426-2.856 5.52-3.428 6.28-.571.76-1.047 1.239-1.425 1.427a21.387 21.387 0 0 1-7.71 1.431c-2.667 0-5.901-1.334-9.707-4-3.805-2.666-7.754-6.328-11.847-10.992-4.093-4.665-8.709-11.184-13.85-19.558-5.137-8.374-10.467-18.271-15.987-29.691l-4.567-8.282c-2.855-5.328-6.755-13.086-11.704-23.267-4.952-10.185-9.329-20.037-13.134-29.554-1.521-3.997-3.806-7.04-6.851-9.134l-1.429-.859c-.95-.76-2.475-1.567-4.567-2.427a30.301 30.301 0 0 0-6.567-1.854l-78.229.568c-7.994 0-13.418 1.811-16.274 5.428l-1.143 1.711c-.571.953-.859 2.475-.859 4.57 0 2.094.571 4.664 1.714 7.707 11.42 26.84 23.839 52.725 37.257 77.659 13.418 24.934 25.078 45.019 34.973 60.237 9.897 15.229 19.985 29.602 30.264 43.112 10.279 13.515 17.083 22.176 20.412 25.981 3.333 3.812 5.951 6.662 7.854 8.565l7.139 6.851c4.568 4.569 11.276 10.041 20.127 16.416 8.853 6.379 18.654 12.659 29.408 18.85 10.756 6.181 23.269 11.225 37.546 15.126 14.275 3.905 28.169 5.472 41.684 4.716h32.834c6.659-.575 11.704-2.669 15.133-6.283l1.136-1.431c.764-1.136 1.479-2.901 2.139-5.276.668-2.379 1-5 1-7.851-.195-8.183.428-15.558 1.852-22.124 1.423-6.564 3.045-11.513 4.859-14.846 1.813-3.33 3.859-6.14 6.136-8.418 2.282-2.283 3.908-3.666 4.862-4.142.948-.479 1.705-.804 2.276-.999 4.568-1.522 9.944-.048 16.136 4.429 6.187 4.473 11.99 9.996 17.418 16.56 5.425 6.57 11.943 13.941 19.555 22.124 7.617 8.186 14.277 14.271 19.985 18.274l5.708 3.426c3.812 2.286 8.761 4.38 14.853 6.283 6.081 1.902 11.409 2.378 15.984 1.427l73.087-1.14c7.229 0 12.854-1.197 16.844-3.572 3.998-2.379 6.373-5 7.139-7.851.764-2.854.805-6.092.145-9.712-.677-3.611-1.344-6.136-2.008-7.563z"/></svg>
+                      <span class="visuallyhidden">ВКонтакте</span>
+                    </a>
+                  </li>
+                  <li class="page-reviews__social-item">
+                    <a class="page-reviews__social-link page-reviews__social-item--inst" href="https://www.instagram.com" target="_blank">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="15" heigh="15" viewBox="0 0 438.536 438.536" fill="#7f7f7f"><path d="M421.981 16.562C410.941 5.519 397.711 0 382.298 0H56.248C40.83 0 27.604 5.521 16.561 16.562 5.52 27.6.001 40.828.001 56.243V382.29c0 15.413 5.518 28.644 16.56 39.683 11.043 11.04 24.272 16.563 39.687 16.563h326.046c15.41 0 28.644-5.523 39.684-16.563 11.043-11.039 16.557-24.27 16.557-39.683V56.243c-.001-15.418-5.514-28.639-16.554-39.681zM157.462 158.025c17.224-16.652 37.924-24.982 62.097-24.982 24.36 0 45.153 8.33 62.381 24.982 17.228 16.655 25.837 36.785 25.837 60.386 0 23.598-8.609 43.729-25.837 60.379-17.228 16.659-38.014 24.988-62.381 24.988-24.172 0-44.87-8.336-62.097-24.988-17.228-16.652-25.841-36.781-25.841-60.379 0-23.601 8.613-43.73 25.841-60.386zm231.403 212.564c0 4.945-1.718 9.083-5.141 12.416-3.433 3.33-7.519 4.996-12.282 4.996h-305.2c-4.948 0-9.091-1.666-12.419-4.996-3.333-3.326-4.998-7.471-4.998-12.416V185.575H89.08c-3.805 11.993-5.708 24.462-5.708 37.402 0 36.553 13.322 67.715 39.969 93.511 26.65 25.786 58.721 38.685 96.217 38.685 24.744 0 47.583-5.903 68.527-17.703 20.937-11.807 37.486-27.839 49.676-48.112 12.183-20.272 18.274-42.4 18.274-66.38 0-12.94-1.91-25.406-5.715-37.402h38.547V370.59h-.002zm0-254.963c0 5.52-1.903 10.184-5.716 13.99-3.805 3.809-8.466 5.711-13.989 5.711h-49.676c-5.517 0-10.185-1.903-13.99-5.711-3.806-3.806-5.708-8.47-5.708-13.99V68.522c0-5.33 1.902-9.945 5.708-13.848 3.806-3.901 8.474-5.854 13.99-5.854h49.676c5.523 0 10.185 1.952 13.989 5.854 3.812 3.903 5.716 8.518 5.716 13.848v47.104z"/></svg>
+                      <span class="visuallyhidden">Инстаграм</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <p class="page-reviews__text">
+                Рекомендую заниматься всем! У меня сколиоз и спина часто болит после рабочего дня. После занятий появилась лекость в мышцах и свобода движений. Приходите!
+              </p>
             </div>
-            <p class="page-reviews__text">
-              Рекомендую заниматься всем! У меня сколиоз и спина часто болит после рабочего дня. После занятий появилась лекость в мышцах и свобода движений. Приходите!
-            </p>
           </div>
         </li>
       </ul>
-      <button class="page-reviews__btn-prev" type="button"><span class="visuallyhidden">Назад</span></button>
-      <button class="page-reviews__btn-next" type="button"><span class="visuallyhidden">Вперед</span></button>
-      <div class="controls">
-        <button class="controls__item" type="button"></button>
-        <button class="controls__item" type="button"></button>
-        <button class="controls__item" type="button"></button>
-      </div>
     </div>
   </section>
-
-  <section class="page-contacts">
+  <section class="page-contacts" id="contacts">
     <div class="container">
-      <h2 class="title">Контакты</h2>
+      <h2 class="title page-contacts__title">Контакты</h2>
       <dl class="page-contacts__list">
-        <dt class="page-contacts__title">Адрес</dt>
-          <dd>г. Кропоткин ул. Дугинец 10а</dd>
-        <dt class="page-contacts__title">Телефон</dt>
-          <dd>+7 918 365 06 07</dd>
-        <dt class="page-contacts__title">E-mail </dt>
-          <dd class="page-contacts__text"><a href="mailto:pilatesplus@gmail.com">pilatesplus@gmail.com</a></dd>
+        <dt class="page-contacts__item-title">Адрес</dt>
+          <dd class="page-contacts__text">г. Кропоткин <br>ул. Дугинец 10а</dd>
+        <dt class="page-contacts__item-title">Телефон</dt>
+          <dd class="page-contacts__text">+7 918 365 06 07</dd>
+        <dt class="page-contacts__item-title">E-mail </dt>
+          <dd class="page-contacts__text"><a class="page-contacts__link" href="mailto:pilatesplus@gmail.com">pilatesplus@gmail.com</a></dd>
       </dl>
     </div>
-    <img class="page-contacts__map" src="#" alt="г. Кропоткинул. Дугинец 10а">
+    <div class="page-contacts__map">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2799.8070551314627!2d40.5681312149649!3d45.433390643520724!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40fa466caee8345f%3A0x35b75298f6d78e58!2z0YPQuy4g0JTRg9Cz0LjQvdC10YYsIDEw0LAsINCa0YDQvtC_0L7RgtC60LjQvSwg0JrRgNCw0YHQvdC-0LTQsNGA0YHQutC40Lkg0LrRgNCw0LksIDM1MjM4MA!5e0!3m2!1sru!2sru!4v1550829877334" width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen></iframe>
+    </div>
   </section>
-
   <footer class="page-footer">
-    <p class="page-footer__copyrigh">Pilates Plus, 2019 <span>&#169;</span></p>
-    <a class="logotype">
-      <img src="#" alt="Pilates+">
-    </a>
-    <ul class="social">
-      <li class="social__item">
-        <a class="social__link" href="https://vk.com/" target="_blank">
-          <span class="visuallyhidden">ВКонтакте</span>
-        </a>
-      </li>
-      <li class="social__item">
-        <a class="social__link" href="https://facebook.com" target="_blank">
-          <span class="visuallyhidden">Фейсбук</span>
-        </a>
-      </li>
-      <li class="social__item">
-        <a class="social__link" href="https://www.instagram.com" target="_blank">
-          <span class="visuallyhidden">Инстаграм</span>
-        </a>
-      </li>
+    <div class="page-footer__wrap">
+      <p class="page-footer__copyrigh">Pilates Plus, 2019 <span>&#169;</span></p>
+      <a class="logotype page-footer__logotype">
+        <picture>
+          <source srcset="img/logo-desktop.png" media="(min-width: 1195px)">
+          <img src="img/logo-mobile.png" alt="Pilates+">
+        </picture>
+      </a>
+      <ul class="social">
+        <li class="social__item">
+          <a class="social__link social__link--vk" href="https://vk.com/" target="_blank">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" heigh="11" viewBox="0 0 548.358 548.358" fill="#f1f4ea"><path d="M545.451 400.298c-.664-1.431-1.283-2.618-1.858-3.569-9.514-17.135-27.695-38.167-54.532-63.102l-.567-.571-.284-.28-.287-.287h-.288c-12.18-11.611-19.893-19.418-23.123-23.415-5.91-7.614-7.234-15.321-4.004-23.13 2.282-5.9 10.854-18.36 25.696-37.397 7.807-10.089 13.99-18.175 18.556-24.267 32.931-43.78 47.208-71.756 42.828-83.939l-1.701-2.847c-1.143-1.714-4.093-3.282-8.846-4.712-4.764-1.427-10.853-1.663-18.278-.712l-82.224.568c-1.332-.472-3.234-.428-5.712.144l-3.713.859-1.431.715-1.136.859c-.952.568-1.999 1.567-3.142 2.995-1.137 1.423-2.088 3.093-2.848 4.996-8.952 23.031-19.13 44.444-30.553 64.238-7.043 11.803-13.511 22.032-19.418 30.693-5.899 8.658-10.848 15.037-14.842 19.126-4 4.093-7.61 7.372-10.852 9.849-3.237 2.478-5.708 3.525-7.419 3.142-1.715-.383-3.33-.763-4.859-1.143-2.663-1.714-4.805-4.045-6.42-6.995-1.622-2.95-2.714-6.663-3.285-11.136-.568-4.476-.904-8.326-1-11.563-.089-3.233-.048-7.806.145-13.706.198-5.903.287-9.897.287-11.991 0-7.234.141-15.085.424-23.555.288-8.47.521-15.181.716-20.125.194-4.949.284-10.185.284-15.705s-.336-9.849-1-12.991a44.442 44.442 0 0 0-2.99-9.137c-1.335-2.95-3.289-5.232-5.853-6.852-2.569-1.618-5.763-2.902-9.564-3.856-10.089-2.283-22.936-3.518-38.547-3.71-35.401-.38-58.148 1.906-68.236 6.855-3.997 2.091-7.614 4.948-10.848 8.562-3.427 4.189-3.905 6.475-1.431 6.851 11.422 1.711 19.508 5.804 24.267 12.275l1.715 3.429c1.334 2.474 2.666 6.854 3.999 13.134 1.331 6.28 2.19 13.227 2.568 20.837.95 13.897.95 25.793 0 35.689-.953 9.9-1.853 17.607-2.712 23.127-.859 5.52-2.143 9.993-3.855 13.418-1.715 3.426-2.856 5.52-3.428 6.28-.571.76-1.047 1.239-1.425 1.427a21.387 21.387 0 0 1-7.71 1.431c-2.667 0-5.901-1.334-9.707-4-3.805-2.666-7.754-6.328-11.847-10.992-4.093-4.665-8.709-11.184-13.85-19.558-5.137-8.374-10.467-18.271-15.987-29.691l-4.567-8.282c-2.855-5.328-6.755-13.086-11.704-23.267-4.952-10.185-9.329-20.037-13.134-29.554-1.521-3.997-3.806-7.04-6.851-9.134l-1.429-.859c-.95-.76-2.475-1.567-4.567-2.427a30.301 30.301 0 0 0-6.567-1.854l-78.229.568c-7.994 0-13.418 1.811-16.274 5.428l-1.143 1.711c-.571.953-.859 2.475-.859 4.57 0 2.094.571 4.664 1.714 7.707 11.42 26.84 23.839 52.725 37.257 77.659 13.418 24.934 25.078 45.019 34.973 60.237 9.897 15.229 19.985 29.602 30.264 43.112 10.279 13.515 17.083 22.176 20.412 25.981 3.333 3.812 5.951 6.662 7.854 8.565l7.139 6.851c4.568 4.569 11.276 10.041 20.127 16.416 8.853 6.379 18.654 12.659 29.408 18.85 10.756 6.181 23.269 11.225 37.546 15.126 14.275 3.905 28.169 5.472 41.684 4.716h32.834c6.659-.575 11.704-2.669 15.133-6.283l1.136-1.431c.764-1.136 1.479-2.901 2.139-5.276.668-2.379 1-5 1-7.851-.195-8.183.428-15.558 1.852-22.124 1.423-6.564 3.045-11.513 4.859-14.846 1.813-3.33 3.859-6.14 6.136-8.418 2.282-2.283 3.908-3.666 4.862-4.142.948-.479 1.705-.804 2.276-.999 4.568-1.522 9.944-.048 16.136 4.429 6.187 4.473 11.99 9.996 17.418 16.56 5.425 6.57 11.943 13.941 19.555 22.124 7.617 8.186 14.277 14.271 19.985 18.274l5.708 3.426c3.812 2.286 8.761 4.38 14.853 6.283 6.081 1.902 11.409 2.378 15.984 1.427l73.087-1.14c7.229 0 12.854-1.197 16.844-3.572 3.998-2.379 6.373-5 7.139-7.851.764-2.854.805-6.092.145-9.712-.677-3.611-1.344-6.136-2.008-7.563z"/></svg>
+            <span class="visuallyhidden">ВКонтакте</span>
+          </a>
+        </li>
+        <li class="social__item">
+          <a class="social__link social__link--fb" href="https://facebook.com" target="_blank">
+            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 96.124 96.123" fill="#f1f4ea"><path d="M72.089.02L59.624 0C45.62 0 36.57 9.285 36.57 23.656v10.907H24.037a1.96 1.96 0 0 0-1.96 1.961v15.803a1.96 1.96 0 0 0 1.96 1.96H36.57v39.876a1.96 1.96 0 0 0 1.96 1.96h16.352a1.96 1.96 0 0 0 1.96-1.96V54.287h14.654a1.96 1.96 0 0 0 1.96-1.96l.006-15.803a1.963 1.963 0 0 0-1.961-1.961H56.842v-9.246c0-4.444 1.059-6.7 6.848-6.7l8.397-.003a1.96 1.96 0 0 0 1.959-1.96V1.98A1.96 1.96 0 0 0 72.089.02z"/></svg>
+            <span class="visuallyhidden">Фейсбук</span>
+          </a>
+        </li>
+        <li class="social__item">
+          <a class="social__link social__link--inst" href="https://www.instagram.com" target="_blank">
+            <svg xmlns="http://www.w3.org/2000/svg" width="13" heigh="13" viewBox="0 0 438.536 425.536" fill="#f1f4ea"><path d="M421.981 16.562C410.941 5.519 397.711 0 382.298 0H56.248C40.83 0 27.604 5.521 16.561 16.562 5.52 27.6.001 40.828.001 56.243V382.29c0 15.413 5.518 28.644 16.56 39.683 11.043 11.04 24.272 16.563 39.687 16.563h326.046c15.41 0 28.644-5.523 39.684-16.563 11.043-11.039 16.557-24.27 16.557-39.683V56.243c-.001-15.418-5.514-28.639-16.554-39.681zM157.462 158.025c17.224-16.652 37.924-24.982 62.097-24.982 24.36 0 45.153 8.33 62.381 24.982 17.228 16.655 25.837 36.785 25.837 60.386 0 23.598-8.609 43.729-25.837 60.379-17.228 16.659-38.014 24.988-62.381 24.988-24.172 0-44.87-8.336-62.097-24.988-17.228-16.652-25.841-36.781-25.841-60.379 0-23.601 8.613-43.73 25.841-60.386zm231.403 212.564c0 4.945-1.718 9.083-5.141 12.416-3.433 3.33-7.519 4.996-12.282 4.996h-305.2c-4.948 0-9.091-1.666-12.419-4.996-3.333-3.326-4.998-7.471-4.998-12.416V185.575H89.08c-3.805 11.993-5.708 24.462-5.708 37.402 0 36.553 13.322 67.715 39.969 93.511 26.65 25.786 58.721 38.685 96.217 38.685 24.744 0 47.583-5.903 68.527-17.703 20.937-11.807 37.486-27.839 49.676-48.112 12.183-20.272 18.274-42.4 18.274-66.38 0-12.94-1.91-25.406-5.715-37.402h38.547V370.59h-.002zm0-254.963c0 5.52-1.903 10.184-5.716 13.99-3.805 3.809-8.466 5.711-13.989 5.711h-49.676c-5.517 0-10.185-1.903-13.99-5.711-3.806-3.806-5.708-8.47-5.708-13.99V68.522c0-5.33 1.902-9.945 5.708-13.848 3.806-3.901 8.474-5.854 13.99-5.854h49.676c5.523 0 10.185 1.952 13.989 5.854 3.812 3.903 5.716 8.518 5.716 13.848v47.104z"/></svg>
+            <span class="visuallyhidden">Инстаграм</span>
+          </a>
+        </li>
       </ul>
+    </div>
   </footer>
-
-  <section class="modal">
-    <button class="modal__btn-close"><span class="visuallyhidden">Закрыть окно записи</span></button>
-    <h2 class="modal__title">Хочешь записаться на занятие?</h2>
-    <p class="modal__text">Оставьте контакты и наши менеджеры свяжуться в ближайшее время</p>
-    <form class="modal__form" action="#">
-      <div class="modal__top">
-        <label class="visuallyhidden" for="input-name">Имя</label>
-        <input class="modal__form-input" id="input-name" type="text" placeholder="Имя">
-        <label class="visuallyhidden" for="input-tel">Телефон</label>
-        <input class="modal__form-input" id="input-tel" type="tel" placeholder="Телефон">
-        <label class="visuallyhidden" for="input-mail">E-mail</label>
-        <input class="modal__form-input" id="input-mail" type="email" placeholder="E-mail">
-      </div>
-      <div class="modal_bottom">
-        <label class="modal__form-label">
-          <input class="modal__form-checkbox" type="checkbox">
-          Я согласен на обработку персональных данных
-        </label>
-        <button class="modal__button" type="submit">Записаться</button>
-      </div>
-    </form>
+  <section class="modal" style="display: none">
+    <div class="modal__wrap">
+      <button class="modal__btn-close"><span class="visuallyhidden">Закрыть окно записи</span></button>
+      <h2 class="modal__title">Хочешь записаться на занятие?</h2>
+      <p class="modal__text">Оставьте контакты и наши менеджеры свяжуться в ближайшее время</p>
+      <form class="modal__form" action="#">
+        <div class="modal__top">
+          <div class="modal__form-input">
+            <label class="visuallyhidden" for="input-name">Имя</label>
+            <input id="input-name" type="text" placeholder="Имя">
+          </div>
+          <div class="modal__form-input">
+            <label class="visuallyhidden" for="input-tel">Телефон</label>
+            <input id="input-tel" type="tel" placeholder="Телефон">
+          </div>
+          <div class="modal__form-input">
+            <label class="visuallyhidden" for="input-mail">E-mail</label>
+            <input id="input-mail" type="email" placeholder="E-mail">
+          </div>
+        </div>
+        <div class="modal__bottom">
+          <div class="modal__form-checkbox-box">
+            <input class="modal__form-checkbox visuallyhidden" type="checkbox" id="checkbox" checked>
+            <label class="modal__form-label" for="checkbox">Я согласен на обработку персональных данных</label>
+          </div>
+          </label>
+          <button class="modal__button" type="submit">Записаться</button>
+        </div>
+      </form>
+    </div>
   </section>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="libs/slick/slick.min.js"></script>
+  <script src="js/main.min.js"></script>
 </body>
 </html>
